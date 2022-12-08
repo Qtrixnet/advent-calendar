@@ -1,0 +1,25 @@
+@import "../../styles/mixins";
+
+#advent .days {
+  margin-top: 34px;
+  background-image: url("https://new.technodom.kz/under/advent-calendar/lights.png");
+
+  @media screen and (max-width: 768px) {
+    background-image: url("https://new.technodom.kz/under/advent-calendar/lights-mobile.png")
+  }
+
+  &__container {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 166px);
+    justify-content: center;
+    gap: 32px;
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 768px) {
+      gap: 16px;
+      grid-template-columns: repeat(auto-fill, 96px);
+    }
+  }
+}
